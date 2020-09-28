@@ -54,6 +54,7 @@
     <Compile Include="Model\Cliente.cs" />
     <Compile Include="Model\Funcionario.cs" />
     <Compile Include="Model\Nota.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="View\ViewCliente.cs">
       <SubType>Form</SubType>
     </Compile>
