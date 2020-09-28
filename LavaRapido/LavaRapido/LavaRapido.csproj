@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D9310ABB-3C88-45CD-AF53-5BC1C532E7C3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LavaRapido</RootNamespace>
+    <AssemblyName>LavaRapido</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\CarroController.cs" />
+    <Compile Include="Controller\ClienteController.cs" />
+    <Compile Include="Controller\FuncionarioController.cs" />
+    <Compile Include="Controller\NotaController.cs" />
+    <Compile Include="Model\Carro.cs" />
+    <Compile Include="Model\Cliente.cs" />
+    <Compile Include="Model\Funcionario.cs" />
+    <Compile Include="Model\Nota.cs" />
+    <Compile Include="View\ViewCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewCliente.Designer.cs">
+      <DependentUpon>ViewCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewFuncionario.Designer.cs">
+      <DependentUpon>ViewFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewPrincipal.Designer.cs">
+      <DependentUpon>ViewPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\ViewCarro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewCarro.Designer.cs">
+      <DependentUpon>ViewCarro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewNota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewNota.Designer.cs">
+      <DependentUpon>ViewNota.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\ViewCarro.resx">
+      <DependentUpon>ViewCarro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewCliente.resx">
+      <DependentUpon>ViewCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewFuncionario.resx">
+      <DependentUpon>ViewFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewNota.resx">
+      <DependentUpon>ViewNota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewPrincipal.resx">
+      <DependentUpon>ViewPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
