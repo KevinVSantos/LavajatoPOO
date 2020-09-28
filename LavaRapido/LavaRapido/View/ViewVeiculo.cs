@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LavaRapido
 {
-    public partial class ViewCarro : Form
+    public partial class ViewVeiculo : Form
     {
-        public ViewCarro()
+        public ViewVeiculo()
         {
             InitializeComponent();
         }

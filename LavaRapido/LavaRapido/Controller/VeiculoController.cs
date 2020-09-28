@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LavaRapido.Controller
 {
-    class CarroController
+    class VeiculoController
     {
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace LavaRapido
 {
-    partial class ViewCarro
+    partial class ViewVeiculo
     {
         /// <summary>
         /// Required designer variable.
@@ -140,7 +140,7 @@
             this.b_salvar.Text = "Salvar";
             this.b_salvar.UseVisualStyleBackColor = true;
             // 
-            // ViewCarro
+            // ViewVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -157,7 +157,7 @@
             this.Controls.Add(this.tb_modelo);
             this.Controls.Add(this.tb_placa);
             this.Controls.Add(this.tb_nome);
-            this.Name = "ViewCarro";
+            this.Name = "ViewVeiculo";
             this.Text = "ViewCarro";
             this.ResumeLayout(false);
             this.PerformLayout();

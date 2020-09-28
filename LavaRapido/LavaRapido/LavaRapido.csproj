@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\CarroController.cs" />
+    <Compile Include="Controller\VeiculoController.cs" />
     <Compile Include="Controller\ClienteController.cs" />
     <Compile Include="Controller\FuncionarioController.cs" />
     <Compile Include="Controller\NotaController.cs" />
-    <Compile Include="Model\Carro.cs" />
+    <Compile Include="Model\Veiculo.cs" />
     <Compile Include="Model\Cliente.cs" />
     <Compile Include="Model\Funcionario.cs" />
     <Compile Include="Model\Nota.cs" />
@@ -74,11 +74,11 @@
       <DependentUpon>ViewPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\ViewCarro.cs">
+    <Compile Include="View\ViewVeiculo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\ViewCarro.Designer.cs">
-      <DependentUpon>ViewCarro.cs</DependentUpon>
+    <Compile Include="View\ViewVeiculo.Designer.cs">
+      <DependentUpon>ViewVeiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ViewNota.cs">
       <SubType>Form</SubType>
@@ -86,8 +86,8 @@
     <Compile Include="View\ViewNota.Designer.cs">
       <DependentUpon>ViewNota.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\ViewCarro.resx">
-      <DependentUpon>ViewCarro.cs</DependentUpon>
+    <EmbeddedResource Include="View\ViewVeiculo.resx">
+      <DependentUpon>ViewVeiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ViewCliente.resx">
       <DependentUpon>ViewCliente.cs</DependentUpon>
