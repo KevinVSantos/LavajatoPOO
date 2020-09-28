@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LavaRapido.Model
 {
-    class Funcionario
+    public class Funcionario
     {
     }
 }

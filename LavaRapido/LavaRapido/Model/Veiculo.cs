@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace LavaRapido.Model
 {
-    class Veiculo
+    public abstract class Veiculo
     {
+        public String nome;
+        public String marca;
+        public String cor;
+        public int numeroRodas;
     }
 }

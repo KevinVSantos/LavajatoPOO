@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LavaRapido.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,11 @@ namespace LavaRapido
 {
     public partial class ViewPrincipal : Form
     {
+        public List<Veiculo> listaVeiculos = new List<Veiculo>();
+        public List<Cliente> listaClientes = new List<Cliente>();
+        public List<Funcionario> listaFuncionarios = new List<Funcionario>();
+        public List<Nota> listaNotas = new List<Nota>();
+
         public ViewPrincipal()
         {
             InitializeComponent();
@@ -46,6 +52,11 @@ namespace LavaRapido
             var formNotas = new ViewNota();
 
             formNotas.ShowDialog();
+        }
+
+        private void ViewPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

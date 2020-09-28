@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LavaRapido.Model
 {
-    class Nota
+    public class Nota
     {
     }
 }
