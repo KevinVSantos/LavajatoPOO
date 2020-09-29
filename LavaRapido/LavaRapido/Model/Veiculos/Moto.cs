@@ -6,14 +6,17 @@ using System.Threading.Tasks;
 
 namespace LavaRapido.Model
 {
+    [Serializable]
     class Moto : Veiculo
     {
-        public Moto(string nome, string marca, string cor)
+        public Moto(string nomeProprietario, string placa, string modelo, int ano)
         {
-            this.nome = nome;
-            this.marca = marca;
-            this.cor = cor;
-            this.numeroRodas = 2;
+            this.NomeProprietario = nomeProprietario;
+            this.Placa = placa;
+            this.Modelo = modelo;
+            this.Ano = ano;
+            this.NumeroRodas = 2;
+            this.Tipo = Enumeradores.EVeiculos.Moto;
         }
     }
 }

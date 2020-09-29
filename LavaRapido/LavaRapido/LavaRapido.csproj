@@ -50,6 +50,7 @@
     <Compile Include="Controller\ClienteController.cs" />
     <Compile Include="Controller\FuncionarioController.cs" />
     <Compile Include="Controller\NotaController.cs" />
+    <Compile Include="Model\Enumeradores\EVeiculos.cs" />
     <Compile Include="Model\Veiculos\Carro.cs" />
     <Compile Include="Model\Veiculos\Moto.cs" />
     <Compile Include="Model\Veiculo.cs" />
