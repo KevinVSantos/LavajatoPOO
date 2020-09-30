@@ -44,6 +44,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.b_excluir = new System.Windows.Forms.Button();
             this.b_salvar = new System.Windows.Forms.Button();
+            this.lb_list = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // tb_tel
@@ -166,6 +167,7 @@
             this.b_excluir.TabIndex = 25;
             this.b_excluir.Text = "Excluir";
             this.b_excluir.UseVisualStyleBackColor = true;
+            this.b_excluir.Click += new System.EventHandler(this.b_excluir_Click);
             // 
             // b_salvar
             // 
@@ -175,12 +177,23 @@
             this.b_salvar.TabIndex = 24;
             this.b_salvar.Text = "Salvar";
             this.b_salvar.UseVisualStyleBackColor = true;
+            this.b_salvar.Click += new System.EventHandler(this.b_salvar_Click);
+            // 
+            // lb_list
+            // 
+            this.lb_list.FormattingEnabled = true;
+            this.lb_list.Location = new System.Drawing.Point(649, 13);
+            this.lb_list.Name = "lb_list";
+            this.lb_list.Size = new System.Drawing.Size(274, 199);
+            this.lb_list.TabIndex = 26;
+            this.lb_list.SelectedIndexChanged += new System.EventHandler(this.lb_list_SelectedIndexChanged);
             // 
             // ViewFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(610, 190);
+            this.ClientSize = new System.Drawing.Size(965, 237);
+            this.Controls.Add(this.lb_list);
             this.Controls.Add(this.b_excluir);
             this.Controls.Add(this.b_salvar);
             this.Controls.Add(this.tb_id);
@@ -199,6 +212,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ViewFuncionario";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.ViewFuncionario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,5 +236,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button b_excluir;
         private System.Windows.Forms.Button b_salvar;
+        private System.Windows.Forms.ListBox lb_list;
     }
 }
