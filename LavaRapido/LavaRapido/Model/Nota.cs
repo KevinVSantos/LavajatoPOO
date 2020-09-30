@@ -15,5 +15,14 @@ namespace LavaRapido.Model
         public string Placa;
         public double Preco;
 
+        public Nota(string clienteCPF, string funcionarioCPF, string placa, double preco, long id)
+        {
+            this.Id = id;
+            this.ClienteCPF = clienteCPF;
+            this.FuncionarioCPF = funcionarioCPF;
+            this.Placa = placa;
+            this.Preco = preco;
+        }
+
     }
 }

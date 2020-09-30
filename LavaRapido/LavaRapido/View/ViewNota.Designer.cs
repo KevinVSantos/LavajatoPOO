@@ -36,10 +36,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tb_carro = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.tb_preco = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.b_salvar = new System.Windows.Forms.Button();
             this.b_excluir = new System.Windows.Forms.Button();
+            this.list_Notas = new System.Windows.Forms.ListBox();
+            this.tb_preco = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -53,6 +54,7 @@
             // 
             // tb_id
             // 
+            this.tb_id.Enabled = false;
             this.tb_id.Location = new System.Drawing.Point(118, 12);
             this.tb_id.Name = "tb_id";
             this.tb_id.Size = new System.Drawing.Size(58, 20);
@@ -106,13 +108,6 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Placa do carro";
             // 
-            // tb_preco
-            // 
-            this.tb_preco.Location = new System.Drawing.Point(118, 116);
-            this.tb_preco.Name = "tb_preco";
-            this.tb_preco.Size = new System.Drawing.Size(100, 20);
-            this.tb_preco.TabIndex = 9;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -124,30 +119,51 @@
             // 
             // b_salvar
             // 
-            this.b_salvar.Location = new System.Drawing.Point(311, 161);
+            this.b_salvar.Location = new System.Drawing.Point(477, 161);
             this.b_salvar.Name = "b_salvar";
             this.b_salvar.Size = new System.Drawing.Size(75, 23);
             this.b_salvar.TabIndex = 10;
             this.b_salvar.Text = "Salvar";
             this.b_salvar.UseVisualStyleBackColor = true;
+            this.b_salvar.Click += new System.EventHandler(this.b_salvar_Click);
             // 
             // b_excluir
             // 
-            this.b_excluir.Location = new System.Drawing.Point(230, 161);
+            this.b_excluir.Location = new System.Drawing.Point(396, 161);
             this.b_excluir.Name = "b_excluir";
             this.b_excluir.Size = new System.Drawing.Size(75, 23);
             this.b_excluir.TabIndex = 11;
             this.b_excluir.Text = "Excluir";
             this.b_excluir.UseVisualStyleBackColor = true;
+            this.b_excluir.Click += new System.EventHandler(this.b_excluir_Click);
+            // 
+            // list_Notas
+            // 
+            this.list_Notas.FormattingEnabled = true;
+            this.list_Notas.Location = new System.Drawing.Point(329, 12);
+            this.list_Notas.Name = "list_Notas";
+            this.list_Notas.Size = new System.Drawing.Size(223, 134);
+            this.list_Notas.TabIndex = 12;
+            this.list_Notas.SelectedIndexChanged += new System.EventHandler(this.list_Notas_SelectedIndexChanged);
+            // 
+            // tb_preco
+            // 
+            this.tb_preco.Location = new System.Drawing.Point(118, 116);
+            this.tb_preco.Name = "tb_preco";
+            this.tb_preco.Size = new System.Drawing.Size(156, 20);
+            this.tb_preco.TabIndex = 13;
+            this.tb_preco.ValidatingType = typeof(int);
+            this.tb_preco.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.tb_preco_MaskInputRejected);
             // 
             // ViewNota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(398, 196);
+            this.ClientSize = new System.Drawing.Size(564, 196);
+            this.Controls.Add(this.tb_preco);
+            this.Controls.Add(this.list_Notas);
             this.Controls.Add(this.b_excluir);
             this.Controls.Add(this.b_salvar);
-            this.Controls.Add(this.tb_preco);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tb_carro);
             this.Controls.Add(this.label4);
@@ -174,9 +190,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tb_carro;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tb_preco;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button b_salvar;
         private System.Windows.Forms.Button b_excluir;
+        private System.Windows.Forms.ListBox list_Notas;
+        private System.Windows.Forms.MaskedTextBox tb_preco;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using LavaRapido.Model;
+using LavaRapido.Model.Enumeradores;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -11,7 +12,7 @@ namespace LavaRapido.Controller
 {
     class VeiculoController
     {
-        public Veiculo GetVeiculo(string nomeProprietario, string placa, string modelo, int ano, int numRodas)
+        public Veiculo GetNewVeiculo(string nomeProprietario, string placa, string modelo, int ano, int numRodas)
         {
             if (numRodas == 2)
             {
@@ -51,6 +52,71 @@ namespace LavaRapido.Controller
                 return true;
             }
             catch (Exception ex) {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+        }
+
+        public Veiculo Get(long Id)
+        {
+            return ViewPrincipal.instance.listaVeiculos.FirstOrDefault(x => x.Id == Id);
+        }
+
+        public long GetMaxId()
+        {
+            if (ViewPrincipal.instance.listaVeiculos.Any())
+                return ViewPrincipal.instance.listaVeiculos.Max(x => x.Id) + 1;
+            else
+                return 1;
+        }
+
+        public bool Excluir(long Id)
+        {
+            var removeVeiculo = ViewPrincipal.instance.listaVeiculos.FirstOrDefault(x => x.Id == Id);
+            if (removeVeiculo != null)
+            {
+                ViewPrincipal.instance.listaVeiculos.Remove(removeVeiculo);
+                SaveAllVeiculos();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        public bool Salvar(string nome, string placa, string modelo, int ano, string tipo, long id)
+        {
+
+            try
+            {
+
+                if (id == 0)
+                {
+                    id = GetMaxId();
+                }
+
+                Veiculo newVeiculo;
+                if(tipo == EVeiculos.Moto.ToString())
+                    newVeiculo = GetNewVeiculo(nome, placa, modelo, ano, 2);
+                else
+                    newVeiculo = GetNewVeiculo(nome, placa, modelo, ano, 4);
+
+                newVeiculo.Id = id;
+
+                if (ViewPrincipal.instance.listaVeiculos.Any(x => x.Id == id))
+                {
+                    Excluir(id);
+                }
+
+                ViewPrincipal.instance.listaVeiculos.Add(newVeiculo);
+                SaveAllVeiculos();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
                 Console.WriteLine(ex.Message);
                 return false;
             }
