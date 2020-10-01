@@ -191,7 +191,7 @@
             this.Controls.Add(this.tb_nome);
             this.Controls.Add(this.label1);
             this.Name = "ViewCliente";
-            this.Text = "Form2";
+            this.Text = "Cliente";
             this.Load += new System.EventHandler(this.ViewCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -211,7 +211,7 @@
             this.Controls.Add(this.tb_nome);
             this.Controls.Add(this.label1);
             this.Name = "ViewFuncionario";
-            this.Text = "Form2";
+            this.Text = "Funcionario";
             this.Load += new System.EventHandler(this.ViewFuncionario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

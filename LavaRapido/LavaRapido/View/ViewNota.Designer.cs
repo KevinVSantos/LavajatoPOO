@@ -158,7 +158,7 @@
             this.Controls.Add(this.tb_id);
             this.Controls.Add(this.label1);
             this.Name = "ViewNota";
-            this.Text = "ViewNota";
+            this.Text = "Nota";
             this.ResumeLayout(false);
             this.PerformLayout();
 

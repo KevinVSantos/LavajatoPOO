@@ -24,6 +24,14 @@ namespace LavaRapido
         private void b_excluir_Click(object sender, EventArgs e)
         {
             FC.Excluir(tb_id.Text);
+            tb_id.Text = "0";
+            tb_cpf.Text = "";
+            tb_nome.Text = "";
+            tb_end.Text = "";
+            tb_idade.Text = "";
+            tb_tel.Text = "";
+            tb_sal.Text = "";
+            lb_list.Items.Clear();
             foreach (Funcionario f in ViewPrincipal.instance.listaFuncionarios)
                 lb_list.Items.Add(f.CPF);
         }
@@ -31,6 +39,14 @@ namespace LavaRapido
         private void b_salvar_Click(object sender, EventArgs e)
         {
             FC.Salvar(tb_id.Text, tb_cpf.Text, tb_nome.Text, tb_end.Text, tb_idade.Text, tb_tel.Text, tb_sal.Text);
+            tb_id.Text = "0";
+            tb_cpf.Text = "";
+            tb_nome.Text = "";
+            tb_end.Text = "";
+            tb_idade.Text = "";
+            tb_tel.Text = "";
+            tb_sal.Text = "";
+            lb_list.Items.Clear();
             foreach (Funcionario f in ViewPrincipal.instance.listaFuncionarios)
                 lb_list.Items.Add(f.CPF);
         }
@@ -38,7 +54,8 @@ namespace LavaRapido
         private void ViewFuncionario_Load(object sender, EventArgs e)
         {
             FC = new FuncionarioController();
-
+            tb_id.Text = "0";
+            lb_list.Items.Clear();
             foreach (Funcionario f in ViewPrincipal.instance.listaFuncionarios)
                 lb_list.Items.Add(f.CPF);
         }

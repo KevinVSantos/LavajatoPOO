@@ -158,7 +158,7 @@
             this.Controls.Add(this.tb_placa);
             this.Controls.Add(this.tb_nome);
             this.Name = "ViewVeiculo";
-            this.Text = "ViewCarro";
+            this.Text = "Carro";
             this.ResumeLayout(false);
             this.PerformLayout();
 
