@@ -145,6 +145,7 @@
             // 
             // tb_id
             // 
+            this.tb_id.Enabled = false;
             this.tb_id.Location = new System.Drawing.Point(532, 34);
             this.tb_id.Name = "tb_id";
             this.tb_id.Size = new System.Drawing.Size(66, 20);
